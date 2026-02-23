@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Simulação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Calculadora de Simulação</h1>
+
+  <div class="box">
+    <label>Aporte (R$)</label>
+    <input type="number" id="aporte" step="0.01">
+
+    <label>Valor do dólar (R$)</label>
+    <input type="number" id="dolar" step="0.01">
+
+    <label>Prazo</label>
+    <select id="prazo">
+      <option value="1">1 dia (liquidez diária)</option>
+      <option value="30">30 dias</option>
+      <option value="90">90 dias</option>
+      <option value="180">180 dias</option>
+      <option value="360">360 dias</option>
+    </select>
+
+    <button onclick="simular()">Simular</button>
+  </div>
+
+  <div class="box resultado" id="resultado"></div>
+
+  <p class="info">
+    A taxa de 0,2% é aplicada somente sobre os rendimentos acumulados,
+    a partir do 2º dia. Nunca sobre o capital.
+  </p>
+
+  <script src="script.js"></script>
+</body>
+</html>
